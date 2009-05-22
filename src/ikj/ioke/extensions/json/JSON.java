@@ -1,3 +1,6 @@
+/*
+ * See LICENSE file in distribution for copyright and licensing information.
+ */
 package ioke.extensions.json;
 
 import java.util.ArrayList;
@@ -11,6 +14,11 @@ import ioke.lang.Runtime;
 import ioke.lang.Text;
 import ioke.lang.extensions.Extension;
 
+/**
+ * Adds native methods needed to support JSON parsing and serialization to Ioke.
+ *
+ * author: <a href="mailto:bragi@ragnarson.com">Łukasz Piestrzeniewicz</a>
+ */
 public class JSON extends Extension {
   public void Extension() {
     
