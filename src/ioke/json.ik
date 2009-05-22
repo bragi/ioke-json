@@ -1,4 +1,4 @@
-Extension register("com.ragnarson.ioke.JSON")
+Extension register("ioke.extensions.json.JSON")
 
 JSON = Origin mimic
 

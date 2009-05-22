@@ -1,4 +1,4 @@
-package com.ragnarson.ioke;
+package ioke.extensions.json;
 
 import java.util.ArrayList;
 import java.util.HashMap;
