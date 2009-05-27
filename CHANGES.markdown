@@ -1,5 +1,9 @@
 # Version Information for ioke-json
 
+## Version 1.0.1 - 2009-05-27
+
+Uses init.ik file to initialize JSON library after use()ing jar file. No manual extension registration necessary.
+
 ## Version 1.0 - 2009-05-22
 
 Initial version, beta quality software, alpha quality package. Supports:

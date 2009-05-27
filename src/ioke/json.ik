@@ -1,5 +1,3 @@
-Extension register("ioke.extensions.json.JSON")
-
 JSON = Origin mimic
 
 JSON CircularReferenceError = Condition Error mimic

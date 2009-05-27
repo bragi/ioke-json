@@ -1,7 +1,6 @@
 
 use("ispec")
-use("ioke-json-1.0.jar")
-use("json.ik")
+use("ioke-json-1.0.1.jar")
 
 describe(true, 
   it("should have JSON representation",
