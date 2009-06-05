@@ -113,7 +113,7 @@ describe(JSON,
     )
     
     it("should set cells on mimic",
-      JSON private:dict("a" => "b", "kind" => "Origin").a should == "b"
+      JSON private:dict("a" => "b", "kind" => "Origin") a should == "b"
     )
     
     it("should not create mimic when it has non-string keys",

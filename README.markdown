@@ -31,13 +31,13 @@ Run ant:
 
     ant
 
-Extension will be built in ioke-json/lib/ioke-json-1.0.1.jar
+Extension will be built in ioke-json/lib/ioke-json-1.0.2.jar
 
 ## Usage
 
-Put ioke-json-1.0.1.jar in you load path. In you .ik file do:
+Put ioke-json-1.0.2.jar in you load path. In you .ik file do:
 
-    use("ioke-json-1.0.1.jar")
+    use("ioke-json-1.0.2.jar")
 
 Then following works:
 
@@ -60,4 +60,4 @@ Thanks to Martin Elwin for creating to evaluation-based JSON parser: http://mart
 
 ## Version
 
-Current version is 1.0.1 released on 2009-05-27. See CHANGES.markdown for details.
+Current version is 1.0.2 released on 2009-06-05. See CHANGES.markdown for details.

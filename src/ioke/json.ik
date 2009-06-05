@@ -22,7 +22,7 @@ JSON do(
   
   private:buildObject = method(d,
     k = d removeAt!("kind")
-    o = Ground send(k)
+    o = Ground send(k) mimic
     d each(pair,
       o cell(pair key) = pair value
     )
