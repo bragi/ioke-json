@@ -31,13 +31,13 @@ Run ant:
 
     ant
 
-Extension will be built in ioke-json/lib/ioke-json-1.0.2.jar
+Extension will be built in ioke-json/lib/ioke-json-1.1.0.jar
 
 ## Usage
 
-Put ioke-json-1.0.2.jar in you load path. In you .ik file do:
+Put ioke-json-1.1.0.jar in you load path. In you .ik file do:
 
-    use("ioke-json-1.0.2.jar")
+    use("ioke-json-1.1.0.jar")
 
 Then following works:
 
@@ -50,9 +50,7 @@ De-serialization is supported as well:
 
     JSON fromText("[]") # => list
     JSON fromText("{}") # =>  dict
-    JSON fromText("{\"kind\" : \"Origin\"}") # => "Origin"
-
-**Note** that when JavaScript hash has the key "kind" then it will be treated as serialized Ioke object and will be de-serialized to proper mimic rather than dict
+    JSON fromText("{\"kind\" : \"Origin\"}") # => {"kind" => "Origin"}
 
 ## Kudos
 
@@ -60,4 +58,4 @@ Thanks to Martin Elwin for creating to evaluation-based JSON parser: http://mart
 
 ## Version
 
-Current version is 1.0.2 released on 2009-06-05. See CHANGES.markdown for details.
+Current version is 1.1.0 released on 2009-06-23. See CHANGES.markdown for details.

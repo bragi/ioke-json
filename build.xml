@@ -50,7 +50,7 @@
   </target>
 
   <target name="jar" depends="compile" description="Create the library file">
-    <jar destfile="${lib.dir}/ioke-json-${ioke-json.version}.jar">
+    <jar destfile="${lib.dir}/ioke-json-latest.jar">
       <fileset dir="${classes.dir}">
         <include name="**/*.class"/>
         <include name="**/*.ik"/>
@@ -63,10 +63,16 @@
     </jar>
   </target>
   
-  <target name="dist" depends="test,jar" description="Builds the ioke-json library" />
+  <target name="version-jar" depends="jar" description="Create the library file">
+    <copy file="${lib.dir}/ioke-json-latest.jar" tofile="${lib.dir}/ioke-json-${ioke-json.version}.jar" />
+  </target>
+  
+  <target name="dist" depends="test,jar,version-jar" description="Builds the ioke-json library" />
 
   <target name="clean" description="clean almost everything">
     <delete dir="${build.dir}"/>
-    <delete file="${lib.dir}/ioke-json-${ioke-json.version}.jar" quiet="true"/>
+    <delete>
+      <fileset dir="${lib.dir}" includes="ioke-json-*.jar"/>
+    </delete>
   </target>
 </project>

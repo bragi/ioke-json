@@ -20,31 +20,8 @@ JSON do(
     )
   )
   
-  private:buildObject = method(d,
-    k = d removeAt!("kind")
-    o = Ground send(k) mimic
-    d each(pair,
-      o cell(pair key) = pair value
-    )
-    o
-  )
-  
-  private:object? = method(d,
-    d key?("kind") && d keys all?(kind?("Text"))
-  )
-  
-  private:dict = macro(
-    d = call resendToMethod(:dict)
-    if(JSON private:object?(d),
-      JSON private:buildObject(d),
-      
-      d
-    )
-  )
-  
   fromIoke = macro(
     let(Text cell(":"), DefaultBehavior cell("=>"),
-      Ground cell("{}"), JSON cell("private:dict"),
       call argAt(0)
     )
   )

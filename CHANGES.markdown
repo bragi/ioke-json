@@ -1,5 +1,9 @@
 # Version Information for ioke-json
 
+## Version 1.1.0 - 2009-06-23
+
+Removed ability to automatically build Origin mimics, it's application responsibility to properly do that.
+
 ## Version 1.0.2 - 2009-06-05
 
 Fixed issue where de-serialization modified kinds instead of their mimics.

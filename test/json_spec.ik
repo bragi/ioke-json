@@ -1,6 +1,6 @@
 
 use("ispec")
-use("ioke-json-1.0.1.jar")
+use("ioke-json-latest.jar")
 
 describe(true, 
   it("should have JSON representation",
@@ -79,7 +79,7 @@ describe(Dict,
   )
   
   it("should have JSON representation",
-    {0 => 1, "a" => "b"} toJson should == "{0 : 1, \"a\" : \"b\"}"
+    {"a" => "b", 0 => 1} toJson should == "{\"a\" : \"b\", 0 : 1}"
   )
 
   it("calls toJson on each key and value",
@@ -103,24 +103,6 @@ describe(DateTime,
 )
 
 describe(JSON,
-  describe("private:dict",
-    it("should create dict",
-      JSON private:dict("a" => "b") should == {"a" => "b"}
-    )
-
-    it("should create mimic",
-      JSON private:dict("a" => "b", "kind" => "Origin") kind should == "Origin"
-    )
-    
-    it("should set cells on mimic",
-      JSON private:dict("a" => "b", "kind" => "Origin") a should == "b"
-    )
-    
-    it("should not create mimic when it has non-string keys",
-      JSON private:dict([] => "b", "kind" => "Origin") should == {[] => "b", "kind" => "Origin"}
-    )
-  )
-
   describe("fromIoke",
     it("should create an empty list",
       JSON fromIoke([]) should == list
@@ -140,8 +122,8 @@ describe(JSON,
       JSON fromText("{}") should == dict
     )
 
-    it("should create Origin",
-      JSON fromText("{\"kind\" : \"Origin\"}") kind should == "Origin"
+    it("should not create Origin",
+      JSON fromText("{\"kind\" : \"Origin\"}") should == dict("kind" => "Origin")
     )
   )
 )
